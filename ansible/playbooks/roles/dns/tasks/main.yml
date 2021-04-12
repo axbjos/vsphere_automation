@@ -1,0 +1,14 @@
+#maintain bind9 DNS Server
+#copy db.axnet.net zone file to ns server
+ 
+- copy:
+   src: ~/vsphereautomation/ansible/templates/db.senglab2.net 
+   dest: /etc/bind/db.senglab2.net
+   owner: root
+   group: bind
+   mode: 0644
+
+- name: restart bind9
+  service:
+    name: bind9
+    state: restarted 

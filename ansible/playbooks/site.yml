@@ -1,0 +1,15 @@
+#site file
+
+- hosts: webservers 
+  become: true
+  become_method: sudo
+
+  roles:
+  - { role: webserver }
+
+- hosts: dns
+  become: true
+  become_method: sudo
+
+  roles:
+  - { role: dns }

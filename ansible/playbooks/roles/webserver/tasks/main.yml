@@ -1,0 +1,21 @@
+#install apache
+#
+- package:
+   name: apache2
+   state: present
+
+- package:
+   name: php
+   state: present
+
+- package:
+   name: libapache2-mod-php 
+   state: present 
+
+- package:
+   name: php-mysql
+   state: present
+
+- package:
+   name: php-cli
+   state: present

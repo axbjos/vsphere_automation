@@ -1,0 +1,29 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     senglab2.net. root.senglab2.net. (
+                             14         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      ns.senglab2.net.
+@       IN      A       192.168.1.250
+ns      IN      A       192.168.1.250
+esxi01  IN      A       192.168.1.201
+esxi02  IN      A       192.168.1.202
+esxi03  IN      A       192.168.1.203
+vctr01  IN      A       192.168.1.204
+tools   IN      A       192.168.1.205
+esxi04  IN      A       192.168.1.207
+web1    IN      A       192.168.1.61
+web2    IN      A       192.168.1.62
+webserverjs1.senglab2.net IN A       192.168.1.130
+webserverjs2 IN A       192.168.1.131
+webserverjs3 IN A       192.168.1.132
+zrrphp  IN      A       192.168.1.125
+ajephp  IN      A       192.168.1.113
+jamphp	IN	A	192.168.1.121
+lylphp  IN      A       192.168.1.119
