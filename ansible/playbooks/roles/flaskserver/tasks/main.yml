@@ -1,0 +1,17 @@
+#install apache
+#
+#this task a fancy way of doing 'sudo apt update'
+- name: update cache
+  apt: name=software-properties-common state=present update_cache=yes cache_valid_time=43202
+
+#make sure pip is installed
+- name: install packages
+  apt: name={{item}} state=present
+  with_items:
+   - python3-pip
+   - python3-dev
+
+#install the requirements
+- pip: 
+    name: Flask
+    state: latest 

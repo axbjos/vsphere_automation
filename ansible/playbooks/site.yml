@@ -1,5 +1,9 @@
-#site file
-
+#Ansible "site.yml" file.
+#Specifies the configuration of hosts
+#
+#end state: all webservers configured with the webserver ROLE
+#
+#apache servers
 - hosts: webservers 
   become: true
   become_method: sudo
@@ -7,9 +11,18 @@
   roles:
   - { role: webserver }
 
-- hosts: dns
+#flask servers
+- hosts: flaskservers
   become: true
   become_method: sudo
 
   roles:
-  - { role: dns }
+  - { role: flaskserver }
+
+# do not do DNS automation yet..
+#- hosts: dns
+# become: true
+# become_method: sudo
+#
+#  roles:
+#  - { role: dns }
