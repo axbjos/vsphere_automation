@@ -1,4 +1,2 @@
-[webservers]
-
-[flaskservers]
-192.168.99.10
+[webphpservers]
+192.168.56.105

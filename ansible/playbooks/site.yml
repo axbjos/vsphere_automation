@@ -4,25 +4,10 @@
 #end state: all webservers configured with the webserver ROLE
 #
 #apache servers
-- hosts: webservers 
+- hosts: webphpservers 
   become: true
   become_method: sudo
 
   roles:
-  - { role: webserver }
+  - { role: webphpserver }
 
-#flask servers
-- hosts: flaskservers
-  become: true
-  become_method: sudo
-
-  roles:
-  - { role: flaskserver }
-
-# do not do DNS automation yet..
-#- hosts: dns
-# become: true
-# become_method: sudo
-#
-#  roles:
-#  - { role: dns }

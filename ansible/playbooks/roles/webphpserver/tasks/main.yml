@@ -1,5 +1,6 @@
 #install apache
 #
+#declarative
 - package:
    name: apache2
    state: present
