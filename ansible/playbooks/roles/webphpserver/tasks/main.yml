@@ -20,3 +20,7 @@
 - package:
    name: php-cli
    state: present
+
+- package:
+   name: gmp-ecm 
+   state: absent
